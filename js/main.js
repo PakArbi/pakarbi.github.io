@@ -1,51 +1,65 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const response = await fetch('../json/dt-faisal.json'); // Mengambil file userData.json
-        if (!response.ok) {
-            throw new Error('Failed to fetch data');
+(function ($) {
+    "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+    
+    
+    // Initiate the wowjs
+    new WOW().init();
+
+
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.sticky-top').addClass('bg-primary shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('bg-primary shadow-sm').css('top', '-150px');
         }
-        const userData = await response.json();
-
-        // Select elements by their IDs
-        const npmElement = document.getElementById("npm-faisal");
-        const namaElement = document.getElementById("nama-faisal");
-        const kelasElement = document.getElementById("kelas-faisal");
-        const emailElement = document.getElementById("email-faisal");
+    });
 
 
-        // Populate HTML elements with user data
-        npmElement.textContent = userData.NPM;
-        namaElement.textContent = userData.Nama;
-        kelasElement.textContent = userData.Kelas;
-        emailElement.textContent = userData.Email;
-
-    } catch (error) {
-        console.error('Error:', error);
-    }
-});
-
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const response = await fetch('../json/dt-farhan.json'); // Mengambil file userData.json
-        if (!response.ok) {
-            throw new Error('Failed to fetch data');
+    // Facts counter
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
+    
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
         }
-        const userData = await response.json();
-
-        // Select elements by their IDs
-        const npmElement = document.getElementById("npm-farhan");
-        const namaElement = document.getElementById("nama-farhan");
-        const kelasElement = document.getElementById("kelas-farhan");
-        const emailElement = document.getElementById("email-farhan");
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
 
 
-        // Populate HTML elements with user data
-        npmElement.textContent = userData.NPM;
-        namaElement.textContent = userData.Nama;
-        kelasElement.textContent = userData.Kelas;
-        emailElement.textContent = userData.Email;
-        
-    } catch (error) {
-        console.error('Error:', error);
-    }
-});
+    // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        items: 1,
+        autoplay: true,
+        smartSpeed: 1000,
+        dots: true,
+        loop: true,
+        nav: true,
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
+    
+})(jQuery);
+
