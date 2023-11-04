@@ -114,13 +114,13 @@ h6,
 @media (max-width: 991.98px) {
     .navbar .navbar-nav {
         padding: 0 15px;
-        background: #F9DEC9;
+        background: #21243D;
     }
     
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
-        color: black;
+        color: white;
     }
 }
 
