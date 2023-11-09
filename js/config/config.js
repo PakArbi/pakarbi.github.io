@@ -1,6 +1,4 @@
-import {
-    setCookieWithExpireHour
-} from 'https://jscroot.github.io/cookie/croot.js';
+import {setCookieWithExpireHour} from 'https://jscroot.github.io/cookie/croot.js';
 
 //token api
 export function getTokenFromAPI() {
@@ -16,7 +14,6 @@ export function getTokenFromAPI() {
         .catch(error => console.error('Gagal mengambil token:', error));
 }
 
-//get data
 export function GetDataForm() {
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
@@ -31,7 +28,6 @@ export function GetDataForm() {
     return data
 }
 
-//login Post
 export function PostLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -45,13 +41,11 @@ export function PostLogin() {
     return data;
 }
 
-//Alert Post
 export function AlertPost(value) {
     alert(value.message + "\nRegistrasi Berhasil")
     window.location.href = "login.html"
 }
 
-//Respon Login
 function ResponsePostLogin(response) {
     if (response && response.token) {
         console.log('Token User:', response.token);
