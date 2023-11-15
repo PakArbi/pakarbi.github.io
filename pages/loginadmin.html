@@ -44,24 +44,30 @@
     <section class="border-red-500 bg-red-600 min-h-screen flex items-center justify-center">
         <div class="bg-gray-100 p-5 flex rounded-2xl shadow-lg max-w-3xl">
             <div class="md:w-1/2 px-5">
-                <h2 class="text-2xl font-bold text-[#002D74]">Login Admin</h2>
-                <form class="mt-6" action="#" method="POST">
+                <h1 class="text-3xl font-bold text-[#002D74] text-center"><a href="../index.html">Pak<span style="color: black;">.</span>Arbi Admin</a></h1><br>
+                <h1 class="text-1x1 text-center">Silahkan Masuk Untuk Akses Pak.Arbi</h1>
+                <form class="mt-6" id="">
                     <div>
-                        <label class="block text-gray-700">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Enter Email Address"
+                        <label class="block text-gray-700">Username</label>
+                        <input type="text" id="username" placeholder="Masukan Username Anda"
                             class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                             autofocus autocomplete required>
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-gray-700">Password</label>
-                        <input type="password" name="email" id="email" placeholder="Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                        <label class="block text-gray-700">Kata Sandi</label>
+                        <input type="password" id="password" placeholder="Masukan Kata Sandi Anda" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                         focus:bg-white focus:outline-none" required>
                     </div>
 
-                    <button onclick="window.location.href='https://pakarbi.github.io/pages/dashboard_admin.html'"
+                    <!-- <button onclick="window.location.href='https://pakarbi.github.io/pages/dashboard_admin.html'"
                         type="submit" class="w-full block bg-red-500 hover:bg-red-400 focus:bg-red-400 text-white font-semibold rounded-lg
-                    px-4 py-3 mt-6">Log In</button>
+                    px-4 py-3 mt-6">Log In</button> -->
+
+                    <input type="role" name="role" id="role" hidden value="user" />
+
+                    <input type="submit" value="Masuk" class="w-full block bg-red-500 hover:bg-red-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                    px-4 py-3 mt-6"></input>
                 </form>
 
             </div>
