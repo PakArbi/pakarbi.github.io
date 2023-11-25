@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pak.Arbi - Halaman Dashboard Admin</title>
+    <title>Pak.Arbi - Halaman Data Pengguna</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -22,8 +22,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -51,10 +51,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="./dashboard_admin.html" class="nav-item nav-link active">Beranda</a>
+                        <a href="./dashboard_admin.html" class="nav-item nav-link">Beranda</a>
                         <a href="./dashboard_scan.html" class="nav-item nav-link">Scan</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                            <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
                                 <a class="dropdown-item" href="./pengguna.html">Pengguna</a>
                                 <a class="dropdown-item" href="./parkiran.html">Parkiran</a>
@@ -74,15 +75,7 @@
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h5 class="display-4 text-white mb-4 animated slideInRight">Admin Pak.Arbi</h5>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <p class="breadcrumb-item" style="color: white;">Aku itu admin... lohhh</p>
-                            <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About Us</li> -->
-                        </ol>
-                    </nav>
+                    <h5 class="display-4 text-white mb-4 animated slideInRight">Data Pengguna</h5>
                 </div>
             </div>
         </div>
@@ -121,32 +114,39 @@
     <!-- Feature End -->
 
 
-    <!-- Team Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Pak.Arbi</div>
-                    <h1 class="mb-4">Dashboard Admin Pak.Arbi</h1>
-                    <p class="mb-4">Selamat Datang Mimin Pak.Arbi...</p>
+    <!-- Laporan Start -->
+    <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <table class="table caption-top">
+                <h4 style="text-align: left;">Laporan Pengguna</h4><br>
+                <div class="col-lg-5">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">Username</th>
+                            <td>farhanrizkimaulana</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Nomor Pokok Mahasiswa</th>
+                            <td>1214020</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Kata Sandi</th>
+                            <td>olkiu567</td>
+                        </tr>
+                        <!-- <tr>
+                            <th scope="col">Kata Sandi Hash</th>
+                            <td>$2a$14$vmVbk4B6IZlGi9unz1Pf.uxSaqHNUQyF.jqZ4ZAqiA4oCN8o0gE0a</td>
+                        </tr> -->
+                        <tr>
+                            <th scope="col">Email</th>
+                            <td>farhanrizki101010@gmail.com</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <!-- <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <img class="img-fluid p-4" src="../img/frame.png" alt="">
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </table>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Laporan End -->
 
 
     <!-- Newsletter Start -->
@@ -172,17 +172,17 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./lib/wow/wow.min.js"></script>
-    <script src="./lib/easing/easing.min.js"></script>
-    <script src="./lib/waypoints/waypoints.min.js"></script>
-    <script src="./lib/counterup/counterup.min.js"></script>
-    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.1.3/main.js"></script>
