@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pak.Arbi - Halaman Profil Pengguna</title>
+    <title>Pak.Arbi - Halaman Edit Profil Parkiran</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,7 +42,7 @@
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="dashboard.html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h3 class="text-white">Pak<span class="text-dark">.</span>Arbi</h3>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
@@ -53,7 +53,8 @@
                     <div class="navbar-nav ms-auto">
                         <a href="./dashboard.html" class="nav-item nav-link">Beranda</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                            <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
                                 <a class="dropdown-item" href="./profil.html">Pengguna</a>
                                 <a class="dropdown-item" href="./profilparkiran.html">Parkiran</a>
@@ -75,7 +76,7 @@
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Pak.Arbi
                     </div>
-                    <h5 class="display-4 text-white mb-4 animated slideInRight">Profil Pengguna</h5>
+                    <h5 class="display-4 text-white mb-4 animated slideInRight">Edit Profil Parkiran</h5>
                 </div>
             </div>
         </div>
@@ -118,33 +119,64 @@
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Profil</div>
-                    <h1 class="mb-4">Dibalik Profil Pengguna</h1>
-                    <p class="mb-4">Sebuah Profil Anak Bangsa yang dibanggakan oleh Orang Tua dan Negara</p>
-                </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="../img/farhan.png" alt="">
-                                        <h6 class="mb-2">Farhan Rizki Maulana</h6>
+                                        <img class="img-fluid rounded-circle p-4" src="../img/logoparkir.png" alt="">
+                                        <h5 class="mb-2">Farhan Rizki Maulana</h5>
                                         <small>1214020</small><br><br>
                                         <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./seeprofil.html">Lihat Profil Pengguna</a></div>
-                                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./editprofil.html">Edit Profil Pengguna</a></div>
+                                                href="./seeprofilparkiran.html">Lihat Profil Parkiran</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Farhan Rizki Maulana">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">NPM</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="1214020">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Jurusan</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="D4 Teknik Informatika">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nama Kendaraan</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Supra X 125">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nomor Kendaraan</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="F 1234 NR">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Jenis Kendaraan</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Motor">
+                        </div>
+                        <a href="seeprofilparkiran.html" class="btn btn-primary">Kirim</a>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Team End -->
 
 
@@ -185,7 +217,8 @@
 
     <!-- Template Javascript -->
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.1.3/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.1.3/js/controller/controllerLogout.js">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.1.3/jsadmin/controller/controllerLogout.js">
     </script>
 </body>
 

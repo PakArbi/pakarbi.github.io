@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pak.Arbi - Halaman Lihat Profil</title>
+    <title>Pak.Arbi - Halaman Lihat Profil Pengguna</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -43,7 +43,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">Pak<span class="text-dark">.</span>Arbi</h1>
+                    <h3 class="text-white">Pak<span class="text-dark">.</span>Arbi</h3>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -52,7 +52,14 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="./dashboard.html" class="nav-item nav-link">Beranda</a>
-                        <a href="./profil.html" class="nav-item nav-link active">Profil</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
+                                <a class="dropdown-item" href="./profil.html">Pengguna</a>
+                                <a class="dropdown-item" href="./profilparkiran.html">Parkiran</a>
+                            </div>
+                        </div>
                         <a href="./login.html" class="nav-item nav-link" id="logoutButton">Keluar</a>
                     </div>
                 </div>
@@ -69,7 +76,7 @@
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Pak.Arbi
                     </div>
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Lihat Profile</h1>
+                    <h5 class="display-4 text-white mb-4 animated slideInRight">Profil Pengguna</h5>
                 </div>
             </div>
         </div>
@@ -119,21 +126,10 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-2 pt-0">
                                         <img class="img-fluid rounded-circle p-4" src="../img/farhan.png" alt="">
-                                        <h5 class="mb-0">Farhan Rizki Maulana</h5>
-                                        <small>1214020 - D4 Teknik Informatika</small><br><br>
+                                        <h6 class="mb-2">Farhan Rizki Maulana</h6>
+                                        <small>1214020</small><br><br>
                                         <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./editprofil.html">Edit Profil</a></div>
-                                        <!-- Profile Links -->
-                                        <!-- <div class="d-flex justify-content-center mt-3">
-                                            <a class="btn btn-square btn-primary m-1" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href="#"><i
-                                                    class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href="#"><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
-                                        </div> -->
+                                                href="./editprofil.html">Edit Profil Pengguna</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +144,7 @@
                             <td>234ewfw43</td>
                         </tr>
                         <tr>
-                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">Username</th>
                             <td>Farhan Rizki Maulana</td>
                         </tr>
                         <tr>
@@ -156,20 +152,12 @@
                             <td>1214020</td>
                         </tr>
                         <tr>
-                            <th scope="col">Jurusan</th>
-                            <td>D4 Teknik Informatika</td>
+                            <th scope="col">Password</th>
+                            <td>olkiu567</td>
                         </tr>
                         <tr>
-                            <th scope="col">Nama Kendaraan</th>
-                            <td>Supra X 125</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Nomor Kendaraan</th>
-                            <td>F 1234 NR</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Jenis Kendaraan</th>
-                            <td>Motor</td>
+                            <th scope="col">Email</th>
+                            <td>farhanrizki101010@gmail.com</td>
                         </tr>
                     </table>
                 </div>

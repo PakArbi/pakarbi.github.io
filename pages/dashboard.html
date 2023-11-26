@@ -43,7 +43,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="dashboard.html" class="navbar-brand">
-                    <h1 class="text-white">Pak<span class="text-dark">.</span>Arbi</h1>
+                    <h3 class="text-white">Pak<span class="text-dark">.</span>Arbi</h3>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -52,7 +52,13 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="./dashboard.html" class="nav-item nav-link active">Beranda</a>
-                        <a href="./profil.html" class="nav-item nav-link">Profil</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
+                                <a class="dropdown-item" href="./profil.html">Pengguna</a>
+                                <a class="dropdown-item" href="./profilparkiran.html">Parkiran</a>
+                            </div>
+                        </div>
                         <a href="./login.html" class="nav-item nav-link" id="logoutButton">Keluar</a>
                     </div>
                 </div>
@@ -69,10 +75,10 @@
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Pak.Arbi
                     </div>
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Selamat Datang, Farhan Rizki Maulana</h1>
+                    <h5 class="display-4 text-white mb-4 animated slideInRight">Selamat Datang di Pak.Arbi</h5>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <p class="breadcrumb-item" style="color: white;">1214020 - D4 Teknik Informatika</p>
+                            <p class="breadcrumb-item" style="color: white;">1214020 - Farhan Rizki Maulana</p>
                             <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">About Us</li> -->
@@ -123,7 +129,9 @@
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Pak.Arbi</div>
                     <h1 class="mb-4">Dashboard Pak.Arbi</h1>
-                    <p class="mb-4">Brooo kasih QR Code Anda Kepada Penjaga Parkir Yeee...</p>
+                    <p class="mb-4">Puntenn Generate QR Dahulu Yaaa, Setelah itu kasih QR Code Anda Kepada Penjaga Parkir Yeee...</p>
+                    <a href="#"
+                        class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Generate QR</a><br><br>
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
@@ -134,7 +142,6 @@
                                         <a href="../img/frame.png" download="nama_gambar.jpg">
                                             <img src="../img/frame.png" alt="Nama Gambar" width="300" class="img-fluid">
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
