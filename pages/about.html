@@ -19,6 +19,7 @@
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -128,21 +129,25 @@
                         <div class="col-md-6">
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="team-item bg-white text-center rounded p-2 pt-0">
+                                    <div class="team-item bg-white text-center rounded p-2 pt-0" data-bs-toggle="modal"
+                                        data-bs-target="#farhanModal">
                                         <img class="img-fluid rounded-circle p-4" src="../img/farhan.png" alt="">
-                                        <h5 class="mb-0">Farhan Rizki Maulana</h5>
-                                        <small>1214020 - D4 Teknik Informatika</small><br><br>
+                                        <h5 class="mb-0">Farhan Rizki Maulana</h5><br>
+                                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+                                            Selengkapnya</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 pt-md-4">
                             <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                    <div class="team-item bg-white text-center rounded p-4 pt-0">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                    <div class="team-item bg-white text-center rounded p-2 pt-0" data-bs-toggle="modal"
+                                        data-bs-target="#faisalModal">
                                         <img class="img-fluid rounded-circle p-4" src="../img/faisal.png" alt="">
-                                        <h5 class="mb-0">Faisal Ashishidiq</h5>
-                                        <small>1214041 - D4 Teknik Informatika</small>
+                                        <h5 class="mb-0">Faisal Ashishidiq</h5><br>
+                                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+                                            Selengkapnya</div>
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +159,66 @@
     </div>
     <!-- Team End -->
 
+    <!-- Modal Farhan Start -->
+    <div class="modal fade" id="farhanModal" tabindex="-1" aria-labelledby="farhanModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="farhanModalLabel">Farhan Rizki Maulana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img class="img-fluid rounded-circle p-4" src="../img/farhan.png" alt="">
+                    <h5 class="mb-0">Farhan Rizki Maulana</h5>
+                    <small>1214020 - D4 Teknik Informatika</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a class="btn btn-square btn-primary m-1" href="https://github.com/FarhanRizkiM"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary m-1"
+                            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=farhanrizki101010@gmail.com"
+                            target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/farhanrizkimln/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary m-1" href="https://www.linkedin.com/in/farhan-rizki-46733523b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Farhan End -->
+
+    <!-- Modal Farhan Start -->
+    <div class="modal fade" id="faisalModal" tabindex="-1" aria-labelledby="faisalModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="faisalModalLabel">Faisal Ashishidiq</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img class="img-fluid rounded-circle p-4 mx-auto" src="../img/faisal.png" alt="">
+                    <h5 class="mb-0">Faisal Ashishidiq</h5>
+                    <small>1214041 - D4 Teknik Informatika</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a class="btn btn-square btn-primary m-1" href="https://github.com/FarhanRizkiM"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary m-1"
+                            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=fahadra96@gmail.com"
+                            target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a class="btn btn-square btn-primary m-1" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Farhan End -->
 
     <!-- Newsletter Start -->
 
@@ -167,8 +232,6 @@
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">PakArbi2023</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     </div>
                 </div>
             </div>
