@@ -197,10 +197,12 @@
 
     <script>
         function startScanner() {
-            // Menggunakan API navigator untuk mengakses kamera
+            // Menggunakan API navigator untuk mengakses kamera belakang
             navigator.mediaDevices.getUserMedia({
                     video: {
-                        facingMode: 'environment'
+                        facingMode: {
+                            exact: 'environment'
+                        }
                     }
                 })
                 .then(function (stream) {
