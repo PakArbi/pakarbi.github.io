@@ -142,6 +142,7 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-2 pt-0">
                                         <img class="img-fluid p-4" src="../img/scan.png" alt="">
+                                        <button onclick="startScanner()">Buka Kamera</button>
                                     </div>
                                 </div>
                             </div>
@@ -193,6 +194,63 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/main.js"></script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/jsadmin/controller/controllerLogout.js"></script>
+
+    <script>
+        function startScanner() {
+            // Menggunakan API navigator untuk mengakses kamera
+            navigator.mediaDevices.getUserMedia({
+                    video: {
+                        facingMode: 'environment'
+                    }
+                })
+                .then(function (stream) {
+                    // Membuat elemen video untuk menampilkan feed dari kamera
+                    var video = document.createElement('video');
+                    document.body.appendChild(video);
+                    video.srcObject = stream;
+                    video.play();
+
+                    // Menggunakan library external seperti instascan atau quagga untuk memindai QR code
+                    // Di sini, saya menggunakan instascan sebagai contoh
+                    var scanner = new Instascan.Scanner({
+                        video: video
+                    });
+                    scanner.addListener('scan', function (content) {
+                        alert('Hasil Pemindaian QR Code: ' + content);
+                        stopScanner(video, stream);
+                    });
+
+                    // Memulai pemindaian
+                    Instascan.Camera.getCameras().then(function (cameras) {
+                        if (cameras.length > 0) {
+                            scanner.start(cameras[0]);
+                        } else {
+                            console.error('Tidak ada kamera yang ditemukan.');
+                        }
+                    }).catch(function (error) {
+                        console.error(error);
+                    });
+                })
+                .catch(function (error) {
+                    console.error('Error: ', error);
+                });
+        }
+
+        function stopScanner(video, stream) {
+            // Menghentikan pemindaian dan melepaskan kamera
+            if (video) {
+                video.pause();
+                video.srcObject = null;
+                document.body.removeChild(video);
+            }
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+            }
+        }
+    </script>
+
+    <!-- Sertakan Instascan library -->
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </body>
 
 </html>
