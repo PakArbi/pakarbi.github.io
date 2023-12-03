@@ -121,36 +121,38 @@
 
     <!-- Laporan Start -->
     <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
+    <div class="container text-center py-5">
+        <div class="table-responsive">
             <table class="table caption-top">
-                <h4 style="text-align: left;">Laporan Pengguna</h4><br>
-                <div class="col-lg-5">
-                    <table class="table">
-                        <tr>
-                            <th scope="col">Username</th>
-                            <td>farhanrizkimaulana</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Nomor Pokok Mahasiswa</th>
-                            <td>1214020</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Kata Sandi</th>
-                            <td>olkiu567</td>
-                        </tr>
-                        <!-- <tr>
-                            <th scope="col">Kata Sandi Hash</th>
-                            <td>$2a$14$vmVbk4B6IZlGi9unz1Pf.uxSaqHNUQyF.jqZ4ZAqiA4oCN8o0gE0a</td>
-                        </tr> -->
-                        <tr>
-                            <th scope="col">Email</th>
-                            <td>farhanrizki101010@gmail.com</td>
-                        </tr>
-                    </table>
-                </div>
+                <caption><h4 style="text-align: left;">Laporan Pengguna</h4></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">UserId</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">NPM</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Password Hash</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                </thead>
+                <tbody id="userDataBody">
+                    <tr>
+                        <td>D4TI1214020</td>
+                        <td>Pakarbi</td>
+                        <td>1214020</td>
+                        <td>pakarbipass</td>
+                        <td>$2a$14$UQ1i3ltuxwriQCR0.782Ue59bYD5tGnYgjmYNob3/BecsN/ITcX.2</td>
+                        <td>User</td>
+                    </tr>
+                    <!-- Tambahkan baris lain jika diperlukan -->
+                </tbody>
             </table>
         </div>
     </div>
+</div>
+
+    
+
     <!-- Laporan End -->
 
 
@@ -190,6 +192,7 @@
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.7/js/controller/controllerGetUser.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/main.js"></script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/jsadmin/controller/controllerLogout.js"></script>
