@@ -124,8 +124,8 @@
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-7">
-                    <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="row g-2">
                         <div class="col-md-6">
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
@@ -142,35 +142,43 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5">
-                    <table class="table">
-                        <tr>
-                            <th scope="col">id</th>
-                            <td>234ewfw43</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Username</th>
-                            <td>Farhan Rizki Maulana</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">NPM</th>
-                            <td>1214020</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Password</th>
-                            <td>olkiu567</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Email</th>
-                            <td>farhanrizki101010@gmail.com</td>
-                        </tr>
-                    </table>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Pengguna</h5>
+                            <div class="table-responsive">
+                                <table class="table w-100">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Userid</td>
+                                            <td scope="col">Username</td>
+                                            <td scope="col">NPM</td>
+                                            <td scope="col">Password</td>
+                                            <td scope="col">Password Hash</td>
+                                            <td scope="col">Email</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="userDataBody">
+                                        <!-- <tr>
+                                                <td>D4TI1214000</td>
+                                                <td>pakarbi</td>
+                                                <td>1214000</td>
+                                                <td>pakarbipass</td>
+                                                <td>$2a$14$UQ1i3ltuxwriQCR0.782Ue59bYD5tGnYgjmYNob3/BecsN/ITcX.2</td>
+                                                <td>1214000@std.ulbi.ac.id</td>
+                                            </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
 
+
+    <!-- Team End -->
 
     <!-- Newsletter Start -->
 
@@ -208,8 +216,10 @@
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.4/js/controller/controllerLogout.js">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/main.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/js/controller/controllerGetUser.js">
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/js/controller/controllerLogout.js">
     </script>
 </body>
 
