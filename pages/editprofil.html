@@ -143,33 +143,40 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <form>
+                    <form id="updateForm" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">UserId</label>
+                            <input type="text" class="form-control" id="useridinput" placeholder="Masukan UserId">
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Username</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Farhan Rizki Maulana">
+                            <input type="text" class="form-control" id="usernameinput" placeholder="Masukan username">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">NPM</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="1214020">
+                            <input type="number" class="form-control" id="npminput"
+                                placeholder="Masukan Nomor Pokok Mahasiswa">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Kata Sandi</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="********">
+                            <input type="password" class="form-control" id="katasandiinput"
+                                placeholder="Masukan Kata Sandi">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Konfirmasi Kata Sandi</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="********">
+                            <input type="password" class="form-control" id="konfirmasikatasandiinput"
+                                placeholder="Masukan Kembali Kata Sandi">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Email</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="farhanrizki101010@gmail.com">
+                            <input type="password" class="form-control" id="emailinput" placeholder="Masukan Email">
                         </div>
-                        <a href="seeprofil.html" class="btn btn-primary">Kirim</a>
+
+                        <input type="role" name="role" id="roleinput" hidden value="user" />
+
+                        <!-- <a href="seeprofil.html" class="btn btn-primary">Kirim</a> -->
+
+                        <input type="submit" value="Ubah" class="btn btn-primary"></input>
 
                     </form>
                 </div>
@@ -219,6 +226,8 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/main.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/js/controller/controllerLogout.js">
     </script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.6.1/js/controller/controllerUpdateUser.js"></script>
 </body>
 
 </html>
