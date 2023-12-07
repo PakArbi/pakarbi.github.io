@@ -159,12 +159,6 @@
                         <div class="mb-3">
                             <label class="form-label">Jurusan</label><br>
                             <input type="text" class="form-control" id="jurusan" placeholder="Masukan Jurusan Anda">
-                            <!-- <select class="form-control" id="jurusan" name="jurusan" style="background-color: white;">
-                                <option value="informatika">Informatika</option>
-                                <option value="akuntansi">Akuntansi</option>
-                                <option value="logistik">Logistik</option>
-                                <option value="bisnis">Bisnis</option>
-                            </select> -->
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nama Kendaraan</label>
@@ -180,13 +174,15 @@
                             <label class="form-label">Jenis Kendaraan</label>
                             <input type="text" class="form-control" id="jeniskendaraan"
                                 placeholder="Masukan Jenis Kendaraan Anda">
-                            <!-- <select class="form-control" id="jeniskendaraan" name="jeniskendaraan"
-                                style="background-color: white;">
-                                <option value="motor">Motor</option>
-                                <option value="mobil">Mobil</option>
-                            </select> -->
                         </div>
-                        <!-- <a href="seeprofilparkiran.html" class="btn btn-primary">Kirim</a> -->
+
+                        <div class="mb-3">
+                            <label class="form-label">Jenis Kendaraan</label>
+                            <select id="newStatus" name="newStatus" class="w-full mb-4 p-2 border text-black" required>
+                                <option value="active">Sedang Parkir</option>
+                                <option value="inactive">Sedang Keluar</option>
+                            </select>
+                        </div>
 
                         <input type="submit" value="Submit" class="btn btn-primary"></input>
 
@@ -239,7 +235,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/js/controller/controllerLogout.js">
     </script>
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.5.9/js/controller/controllerParkiran.js">
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.6.3/js/controller/controllerInsertParkiran.js">
     </script>
 </body>
 
