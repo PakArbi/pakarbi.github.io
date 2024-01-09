@@ -30,6 +30,41 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .team-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .camera-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        /* Custom Responsiveness */
+        @media (max-width: 768px) {
+            .hero-header .container {
+                text-align: center;
+            }
+
+            .hero-header h5 {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -41,7 +76,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
@@ -74,7 +108,6 @@
     </div>
     <!-- Navbar End -->
 
-
     <!-- Hero Start -->
     <div class="container-fluid pt-5 hero-header" style="background-color: rgb(220 38 38);">
         <div class="container pt-5">
@@ -85,9 +118,6 @@
                     <h5 class="display-4 text-white mb-4 animated slideInRight">Scan QR Code</h5>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About Us</li> -->
                         </ol>
                     </nav>
                 </div>
@@ -95,38 +125,6 @@
         </div>
     </div>
     <!-- Hero End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-light p-3"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- About Start -->
-
-    <!-- About End -->
-
-
-    <!-- Feature Start -->
-
-    <!-- Feature End -->
-
 
     <!-- Team Start -->
     <div class="container-fluid bg-light py-5">
@@ -141,10 +139,12 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <img class="img-fluid p-4" src="../img/scan.png" alt="">
-                                        <button onclick="startScanner()">Buka Kamera</button>
+                                <div class="col-12 wow fadeIn team-item" data-wow-delay="0.1s">
+                                    <div id="cameraContainer" class="camera-container d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-sm btn-transparent"
+                                            onclick="startScanner()">Buka Kamera</button>
+                                        <button class="btn btn-danger btn-sm btn-transparent"
+                                            onclick="stopScanner()">Tutup Kamera</button>
                                     </div>
                                 </div>
                             </div>
@@ -156,11 +156,9 @@
     </div>
     <!-- Team End -->
 
-
     <!-- Newsletter Start -->
 
     <!-- Newsletter End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid text-white-50 footer pt-5" style="background-color: #DC2626">
@@ -169,8 +167,6 @@
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">PakArbi2023</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     </div>
                 </div>
             </div>
@@ -178,10 +174,8 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -198,57 +192,61 @@
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.7.0/jsadmin/controller/controllerLogout.js"></script>
 
     <script>
+        let video;
+        let stream;
+
         function startScanner() {
-            // Menggunakan API navigator untuk mengakses kamera belakang
-            navigator.mediaDevices.getUserMedia({
-                    video: {
-                        facingMode: {
-                            exact: 'environment'
-                        }
-                    }
-                })
-                .then(function (stream) {
-                    // Membuat elemen video untuk menampilkan feed dari kamera
+            Instascan.Camera.getCameras().then(function (cameras) {
+                if (cameras.length > 0) {
+                    var selectedCamera = cameras[0];
                     var video = document.createElement('video');
-                    document.body.appendChild(video);
-                    video.srcObject = stream;
-                    video.play();
+                    video.id = 'cameraVideo';
+                    document.getElementById('cameraContainer').appendChild(video);
 
-                    // Menggunakan library external seperti instascan atau quagga untuk memindai QR code
-                    // Di sini, saya menggunakan instascan sebagai contoh
-                    var scanner = new Instascan.Scanner({
-                        video: video
-                    });
-                    scanner.addListener('scan', function (content) {
-                        alert('Hasil Pemindaian QR Code: ' + content);
-                        stopScanner(video, stream);
-                    });
+                    navigator.mediaDevices.getUserMedia({
+                            video: {
+                                deviceId: selectedCamera.id,
+                                facingMode: 'environment'
+                            }
+                        })
+                        .then(function (stream) {
+                            video.srcObject = stream;
+                            video.play();
+                            video.style.transform = 'scaleX(-1)';
+                            var scanner = new Instascan.Scanner({
+                                video: video
+                            });
+                            scanner.addListener('scan', function (content) {
+                                alert('Hasil Pemindaian QR Code: ' + content);
+                                stopScanner();
+                            });
 
-                    // Memulai pemindaian
-                    Instascan.Camera.getCameras().then(function (cameras) {
-                        if (cameras.length > 0) {
-                            scanner.start(cameras[0]);
-                        } else {
-                            console.error('Tidak ada kamera yang ditemukan.');
-                        }
-                    }).catch(function (error) {
-                        console.error(error);
-                    });
-                })
-                .catch(function (error) {
-                    console.error('Error: ', error);
-                });
+                            scanner.start(selectedCamera);
+                        })
+                        .catch(function (error) {
+                            console.error('Error getUserMedia: ', error);
+                        });
+                } else {
+                    console.error('Tidak ada kamera yang ditemukan.');
+                }
+            }).catch(function (error) {
+                console.error('Error Instascan.Camera.getCameras(): ', error);
+            });
         }
 
-        function stopScanner(video, stream) {
-            // Menghentikan pemindaian dan melepaskan kamera
+        function stopScanner() {
+            var video = document.getElementById('cameraVideo');
             if (video) {
-                video.pause();
-                video.srcObject = null;
-                document.body.removeChild(video);
-            }
-            if (stream) {
-                stream.getTracks().forEach(track => track.stop());
+                console.log('Trying to stop the camera.');
+                if (video.srcObject) {
+                    video.srcObject.getTracks().forEach(track => track.stop());
+                    console.log('Camera stopped successfully.');
+                } else {
+                    console.error('srcObject is null or undefined.');
+                }
+                document.getElementById('cameraContainer').removeChild(video);
+            } else {
+                console.error('Cannot find video element with ID "cameraVideo".');
             }
         }
     </script>
