@@ -1,0 +1,22 @@
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin: 20px;
+}
+
+.text-primary {
+    color: red;
+}
+
+.text-warning {
+    color: yellow;
+}
