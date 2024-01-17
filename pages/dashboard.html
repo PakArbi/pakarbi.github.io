@@ -137,8 +137,11 @@
                     <h1 class="mb-4">Dashboard Pak.Arbi</h1>
                     <p class="mb-4">"Generate QR" dahulu yaaa, Setelah itu berikan QR Code anda kepada penjaga parkir
                         okee...</p>
-                    <a href="#" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Generate
-                        QR</a><br><br>
+                        <!-- <a href="#" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Generate
+                            QR</a><br><br> -->
+                        <button id="generateQRButton" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+                            Generate QR
+                        </button>
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
@@ -146,9 +149,10 @@
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <a href="../img/frame.png" download="nama_gambar.jpg">
+                                        <!-- <a href="../img/frame.png" download="nama_gambar.jpg">
                                             <img src="../img/frame.png" alt="Nama Gambar" width="300" class="img-fluid">
-                                        </a>
+                                        </a> -->
+                                        <div id="qrcode-container"></div>
                                     </div>
                                 </div>
                             </div>
