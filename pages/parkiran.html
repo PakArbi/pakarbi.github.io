@@ -122,32 +122,32 @@
 
 
     <!-- Laporan Start -->
-    <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <table class="table caption-top">
-                <h4 style="text-align: left;">Laporan Parkiran</h4><br>
-                <div class="table-responsive">
-                    <table class="table w-100">
-                        <thead>
-                            <tr>
-                                <td scope="col">Parkiranid</td>
-                                <td scope="col">Nama</td>
-                                <td scope="col">NPM</td>
-                                <td scope="col">Prodi</td>
-                                <td scope="col">Nama Kendaraan</td>
-                                <td scope="col">Nomor Kendaraan</td>
-                                <td scope="col">Jenis Kendaraan</td>
-                                <!-- <td scope="col">Status</td> -->
-                            </tr>
-                        </thead>
-                        <tbody id="parkiranDataBody">
-                            <!-- Your table body content -->
-                        </tbody>
-                    </table>
-                </div>
+   <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h4 style="text-align: left;">Laporan Parkiran</h4><br>
+        <div class="table-responsive">
+            <table class="table w-100">
+                <thead>
+                    <tr>
+                        <th scope="col">Parkiranid</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NPM</th>
+                        <th scope="col">Prodi</th>
+                        <th scope="col">Nama Kendaraan</th>
+                        <th scope="col">Nomor Kendaraan</th>
+                        <th scope="col">Jenis Kendaraan</th>
+                        <!-- <th scope="col">Status</th> -->
+                        <th scope="col">QR Code</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="parkiranDataBody">
+                    <!-- isi table dari js -->
+                </tbody>
             </table>
         </div>
     </div>
+</div>
     <!-- Laporan End -->
 
 
@@ -188,10 +188,10 @@
 
     <!-- Template Javascript -->
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.0/js/user/controller/controllerGetParkiran.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.0/main.js"></script>
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.1/js/user/controller/controllerGetParkiran.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.1/main.js"></script>
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.0/js/user/controller/controllerLogout.js"></script>
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.1/js/user/controller/controllerLogout.js"></script>
 </body>
 
 </html>
