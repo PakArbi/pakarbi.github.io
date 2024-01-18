@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pak.Arbi - Halaman Profil Parkiran</title>
+    <title>Pak.Arbi - Halaman Data Parkiran</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +47,7 @@
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="dashboard.html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h3 class="text-white">Pak<span class="text-dark">.</span>Arbi</h3>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
@@ -56,16 +56,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="./dashboard.html" class="nav-item nav-link">Beranda</a>
+                        <a href="./dashboard_admin.html" class="nav-item nav-link">Beranda</a>
+                        <a href="./dashboard_scan.html" class="nav-item nav-link">Scan</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                                data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
-                                <a class="dropdown-item" href="./profil.html">Pengguna</a>
-                                <a class="dropdown-item" href="./profilparkiran.html">Parkiran</a>
+                                <a class="dropdown-item" href="./pengguna.html">Pengguna</a>
+                                <a class="dropdown-item" href="./parkiranEmail.html">Parkiran</a>
                             </div>
                         </div>
-                        <a href="./login.html" class="nav-item nav-link" id="logoutButton">Keluar</a>
+                        <a href="./loginadmin.html" class="nav-item nav-link" id="logoutButton">Keluar</a>
                     </div>
                 </div>
             </nav>
@@ -75,13 +76,13 @@
 
 
     <!-- Hero Start -->
-    <div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container-fluid pt-5 hero-header" style="background-color: rgb(220 38 38);">
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Pak.Arbi
                     </div>
-                    <h5 class="display-4 text-white mb-4 animated slideInRight">Profil Parkiran</h5>
+                    <h5 class="display-4 text-white mb-4 animated slideInRight">Data Parkiran</h5>
                 </div>
             </div>
         </div>
@@ -120,37 +121,33 @@
     <!-- Feature End -->
 
 
-    <!-- Team Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Profil</div>
-                    <h1 class="mb-4">Dibalik Profil Parkiran</h1>
-                    <p class="mb-4">Sebuah Profil Parkiran Yang Berisi Data Data Motor atau Mobil Anda.</p>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="../img/logoparkir.png" alt="">
-                                        <h6 class="mb-2">Profil Parkiran Pak.Arbi</h6><br>
-                                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./seeprofilparkiran.html">Selengkapnya</a></div>
-                                        <!-- <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./editprofilparkiran.html">Edit Profil Parkiran</a></div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Laporan Start -->
+   <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h4 style="text-align: left;">Laporan Parkiran</h4><br>
+        <div class="table-responsive">
+            <table class="table w-100">
+                <thead>
+                    <tr>
+                        <th scope="col">Parkiranid</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NPM</th>
+                        <th scope="col">Prodi</th>
+                        <th scope="col">Nama Kendaraan</th>
+                        <th scope="col">Nomor Kendaraan</th>
+                        <th scope="col">Jenis Kendaraan</th>
+                        <th scope="col">QR Code</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="parkiranDataBody">
+                    <!-- isi table dari js -->
+                </tbody>
+            </table>
         </div>
     </div>
-    <!-- Team End -->
+</div>
+    <!-- Laporan End -->
 
 
     <!-- Newsletter Start -->
@@ -159,7 +156,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container-fluid text-white-50 footer pt-5" style="background-color: #DC2626">
         <div class="container wow fadeIn" data-wow-delay="0.1s">
             <div class="copyright">
                 <div class="row">
@@ -182,16 +179,18 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/counterup/counterup.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./lib/wow/wow.min.js"></script>
+    <script src="./lib/easing/easing.min.js"></script>
+    <script src="./lib/waypoints/waypoints.min.js"></script>
+    <script src="./lib/counterup/counterup.min.js"></script>
+    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.4/js/admin/controller/controllerGetParkiran.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.4/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.4/js/user/controller/controllerLogout.js">
-    </script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.4/js/user/controller/controllerLogout.js"></script>
 </body>
 
 </html>
