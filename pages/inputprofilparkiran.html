@@ -144,9 +144,9 @@
                 <div class="col-lg-5">
                     <form id="formparkiran">
                         <div class="mb-3">
-                            <label class="form-label">Id Parkiran</label>
+                            <label class="form-label">Parkiran ID</label>
                             <input type="text" class="form-control" id="newparkiranid"
-                                placeholder="Masukan Id Parkiran">
+                                placeholder="Masukan Parkiran ID (D3/D4/S1NPM)">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nama Lengkap</label>
@@ -159,29 +159,38 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Prodi</label><br>
-                            <input type="text" class="form-control" id="newprodi" placeholder="Masukan Jurusan Anda">
+                            <input type="text" class="form-control" id="newprodi" placeholder="Masukan Prodi Anda">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nama Kendaraan</label>
                             <input type="text" class="form-control" id="newnamakendaraan"
-                                placeholder="Masukan Nama Kendaraan Anda">
+                                placeholder="Masukan Nama Merk Kendaraan Anda">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nomor Kendaraan</label>
                             <input type="text" class="form-control" id="newnomorkendaraan"
-                                placeholder="Masukan Nomor Kendaraan Anda">
+                                placeholder="Masukan Nomor Polisi Kendaraan Anda">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Jenis Kendaraan</label>
                             <input type="text" class="form-control" id="newjeniskendaraan"
                                 placeholder="Masukan Jenis Kendaraan Anda">
                         </div>
-
+                        <div class="mb-3">
+                            <label class="form-label">Waktu Masuk Pelajaran</label>
+                            <input type="text" class="form-control" id="newjeniskendaraan"
+                                placeholder="Masukan Waktu Masuk Pelajaran Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Waktu Keluar Pelajaran</label>
+                            <input type="text" class="form-control" id="newjeniskendaraan"
+                                placeholder="Masukan Waktu Keluar Pelajaran Anda">
+                        </div>
                         <div class="mb-3">
                             <label class="form-label">Status</label>
-                            <select id="newStatus" name="newStatus" class="w-full mb-4 p-2 border text-black" required>
-                                <option value="active">Sudah Parkir</option>
-                                <option value="inactive">Sedang Keluar</option>
+                            <select id="newStatus" name="newStatus" class="w-full mb-2 p-2 border text-black" required>
+                                <option value="active">Mahasiswa Aktif</option>
+                                <option value="inactive">Mahasiswa Tidak Aktif</option>
                             </select>
                         </div>
 
@@ -234,7 +243,8 @@
     <!-- Template Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
     </script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerInsertParkiran.js">

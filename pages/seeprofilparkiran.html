@@ -61,7 +61,6 @@
                             <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
-                                <a class="dropdown-item" href="./profil.html">Pengguna</a>
                                 <a class="dropdown-item" href="./profilparkiran.html">Parkiran</a>
                             </div>
                         </div>
@@ -127,13 +126,13 @@
                 <div class="col-lg-7">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="row g-4"
+                            <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-2 pt-0">
                                         <img class="img-fluid rounded-circle p-4" src="../img/logoparkir.png" alt="">
                                         <h6 class="mb-2">Profil Parkiran Pak.Arbi</h6><br>
-                                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
-                                                href="./editprofilparkiran.html">Edit Profil Parkiran</a></div>
+                                        <!-- <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
+                                                href="./editprofilparkiran.html">Edit Profil Parkiran</a></div> -->
                                         <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3"><a
                                                 href="./inputprofilparkiran.html">Input Profil Parkiran</a></div>
                                     </div>
@@ -150,7 +149,7 @@
                                 <table class="table w-100">
                                     <thead>
                                         <tr>
-                                            <td scope="col">Parkiranid</td>
+                                            <td scope="col">ParkiranID</td>
                                             <td scope="col">Nama</td>
                                             <td scope="col">NPM</td>
                                             <td scope="col">Prodi</td>
@@ -158,8 +157,9 @@
                                             <td scope="col">Nomor Kendaraan</td>
                                             <td scope="col">Jenis Kendaraan</td>
                                             <td scope="col">Status</td>
-                                            <th scope="col" id="modalContainer">QR Code</th>
-                                            <th scope="col">Action</th>
+                                            <td scope="col">Waktu Masuk</td>
+                                            <td scope="col">Waktu Keluar</td>
+                                            <td scope="col" id="modalContainer">QR Code</td>
                                         </tr>
                                     </thead>
                                     <tbody id="parkiranDataBody">
@@ -216,7 +216,8 @@
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerGetParkiran.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
     </script>
 </body>
 

@@ -133,30 +133,28 @@
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-lg-10 wow fadeIn" data-wow-delay="0.1s">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Pak.Arbi</div>
                     <h1 class="mb-4">Dashboard Pak.Arbi</h1>
-                    <p class="mb-4">"Generate QR" dahulu yaaa, Setelah itu berikan QR Code anda kepada penjaga parkir
+                    <p class="mb-4">"Generate QR" dahulu yaaa untuk input data parkiran, Setelah itu berikan QR Code
+                        anda kepada penjaga parkir
                         okee...</p>
-                        <!-- <a href="#" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Generate
+                    <!-- <a href="#" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Generate
                             QR</a><br><br> -->
-                        <button id="generateQRButton" class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+                    <a href="../pages/inputprofilparkiran.html">
+                        <button id="generateQRButton"
+                            class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
                             Generate QR
                         </button>
+                    </a>
                 </div>
                 <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="team-item bg-white text-center rounded p-2 pt-0">
-                                        <!-- <a href="../img/frame.png" download="nama_gambar.jpg">
+                    <div class="col-md-6">
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                            <!-- <a href="../img/frame.png" download="nama_gambar.jpg">
                                             <img src="../img/frame.png" alt="Nama Gambar" width="300" class="img-fluid">
                                         </a> -->
-                                        <div id="qrCodeImage" alt="QR Code"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="qrCodeImage" alt="QR Code"></div>
                         </div>
                     </div>
                 </div>
@@ -203,8 +201,10 @@
 
     <!-- Template Javascript -->
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerGetOneData"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerGetOneData"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
     </script>
 </body>
 
