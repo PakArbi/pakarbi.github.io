@@ -176,13 +176,23 @@
                             <input type="text" class="form-control" id="jeniskendaraaninput"
                                 placeholder="Masukan Jenis Kendaraan Anda">
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Jam Masuk Pelajaran</label>
+                            <input type="text" class="form-control" id="jammasukinput"
+                                placeholder="Masukan Jam Masuk Pelajaran Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Jam Keluar Pelajaran</label>
+                            <input type="text" class="form-control" id="jamkeluarinput"
+                                placeholder="Masukan Jam Keluar Pelajaran Anda">
+                        </div>
 
                         <div class="mb-3">
                             <label class="form-label">Status</label>
                             <select id="Statusinput" name="newStatus" class="w-full mb-4 p-2 border text-black"
                                 required>
-                                <option value="active">Sedang Parkir</option>
-                                <option value="inactive">Sedang Keluar</option>
+                                <option value="active">Mahasiswa Aktif</option>
+                                <option value="inactive">Mahasiswa Tidak Aktif</option>
                             </select>
                         </div>
 
@@ -234,7 +244,8 @@
     <!-- Template Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/main.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerLogout.js">
     </script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.8.6/js/user/controller/controllerUpdateParkiran.js">
