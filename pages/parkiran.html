@@ -62,7 +62,7 @@
                             <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdownData" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownData">
-                                <!-- <a class="dropdown-item" href="./pengguna.html">Pengguna</a> -->
+                                <a class="dropdown-item" href="./pengguna.html">Pengguna</a>
                                 <a class="dropdown-item" href="./parkiran.html">Parkiran</a>
                             </div>
                         </div>
@@ -122,31 +122,34 @@
 
 
     <!-- Laporan Start -->
-   <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h4 style="text-align: left;">Laporan Parkiran</h4><br>
-        <div class="table-responsive">
-            <table class="table w-100">
-                <thead>
-                    <tr>
-                        <th scope="col">Parkiranid</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">NPM</th>
-                        <th scope="col">Prodi</th>
-                        <th scope="col">Nama Kendaraan</th>
-                        <th scope="col">Nomor Kendaraan</th>
-                        <th scope="col">Jenis Kendaraan</th>
-                        <th scope="col">QR Code</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="parkiranDataBody">
-                    <!-- isi table dari js -->
-                </tbody>
-            </table>
+    <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h4 style="text-align: left;">Laporan Parkiran</h4><br>
+            <div class="table-responsive">
+                <table class="table w-100">
+                    <thead>
+                        <tr>
+                            <th scope="col">ParkiranID</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">NPM</th>
+                            <th scope="col">Prodi</th>
+                            <th scope="col">Nama Kendaraan</th>
+                            <th scope="col">Nomor Kendaraan</th>
+                            <th scope="col">Jenis Kendaraan</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Jam Masuk</th>
+                            <th scope="col">Jam Keluar</td>
+                            <th scope="col">QR Code</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="parkiranDataBody">
+                        <!-- isi table dari js -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
     <!-- Laporan End -->
 
 
@@ -186,8 +189,8 @@
     <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.1/js/user/controller/controllerGetParkiran.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.8/js/controller/controllerParkiranAdmin.js">
+    </script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.1/main.js"></script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.1/js/user/controller/controllerLogout.js"></script>
