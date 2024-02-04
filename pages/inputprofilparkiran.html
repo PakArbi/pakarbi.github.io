@@ -172,6 +172,12 @@
                             <input type="text" class="form-control" id="newjeniskendaraan" name="newjeniskendaraan"
                                 placeholder="Masukan Jenis Kendaraan Anda"><br>
 
+                            <label class="form-label" for="newStatus">Status</label>
+                            <select id="newStatus" name="newStatus" class="w-full mb-2 p-2 border text-black" required>
+                                <option value="active">Mahasiswa Aktif</option>
+                                <option value="inactive">Mahasiswa Tidak Aktif</option>
+                            </select><br><br>
+
                             <label class="form-label" for="newjammasuk">Jam Masuk Pelajaran</label>
                             <input type="text" class="form-control" id="newjammasuk" name="newjammasuk"
                                 placeholder="Masukan Jam Masuk Pelajaran Anda"><br>
@@ -180,11 +186,6 @@
                             <input type="text" class="form-control" id="newjamkeluar" name="newjamkeluar"
                                 placeholder="Masukan Jam Keluar Pelajaran Anda"><br>
 
-                            <label class="form-label" for="newStatus">Status</label>
-                            <select id="newStatus" name="newStatus" class="w-full mb-2 p-2 border text-black" required>
-                                <option value="active">Mahasiswa Aktif</option>
-                                <option value="inactive">Mahasiswa Tidak Aktif</option>
-                            </select><br><br>
 
                             <button type="submit" id="submit" class="btn btn-primary">
                                 Simpan Data 1
@@ -240,7 +241,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.1/js/controller/controllerLogout.js">
     </script>
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.1/js/controller/controllerInsertParkiran.js">
+        src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.2/js/controller/controllerInsertParkiran.js">
     </script>
 </body>
 
