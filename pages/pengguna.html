@@ -123,31 +123,33 @@
 
     <!-- Laporan Start -->
     <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <div class="table-responsive">
-            <table class="table caption-top">
-                <caption><h4 style="text-align: left;">Laporan Pengguna</h4></caption>
-                <thead>
-                    <tr>
-                        <th scope="col">UserId</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">NPM</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Password Hash</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Role</th>
-                    </tr>
-                </thead>
-                <tbody id="userDataBody">
+        <div class="container text-center py-5">
+            <div class="table-responsive">
+                <table class="table caption-top">
+                    <caption>
+                        <h4 style="text-align: left;">Laporan Pengguna</h4>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">UsernameID</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">NPM</th>
+                            <!-- <th scope="col">Password</th> -->
+                            <th scope="col">Password Hash</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userDataBody">
 
-                    <!-- Tambahkan baris lain jika diperlukan -->
-                </tbody>
-            </table>
+                        <!-- Tambahkan baris lain jika diperlukan -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
-    
+
 
     <!-- Laporan End -->
 
@@ -188,7 +190,9 @@
     <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.1/js/user/controller/controllerGetUser.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.9/js/controller/controllerUserAdmin.js">
+    </script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.1/main.js"></script>
     <script type="module"
         src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.1/js/user/controller/controllerLogout.js"></script>
