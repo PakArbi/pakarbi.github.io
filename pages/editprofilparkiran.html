@@ -143,60 +143,52 @@
 
                 <div class="col-lg-5">
                     <form id="updateparkiran" method="POST">
-                        <div class="mb-3">
-                            <label class="form-label">Id Parkiran</label>
-                            <input type="text" class="form-control" id="parkiranidinput"
-                                placeholder="Masukan Id Parkiran">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="namainput"
-                                placeholder="Masukan Nama Lengkap Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">NPM</label>
-                            <input type="number" class="form-control" id="npminput" placeholder="Masukan NPM Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Prodi</label><br>
-                            <input type="text" class="form-control" id="prodiinput" placeholder="Masukan Jurusan Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nama Kendaraan</label>
-                            <input type="text" class="form-control" id="namakendaraaninput"
-                                placeholder="Masukan Nama Kendaraan Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Kendaraan</label>
-                            <input type="text" class="form-control" id="nomorkendaraaninput"
-                                placeholder="Masukan Nomor Kendaraan Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Jenis Kendaraan</label>
-                            <input type="text" class="form-control" id="jeniskendaraaninput"
-                                placeholder="Masukan Jenis Kendaraan Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Jam Masuk Pelajaran</label>
-                            <input type="text" class="form-control" id="jammasukinput"
-                                placeholder="Masukan Jam Masuk Pelajaran Anda">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Jam Keluar Pelajaran</label>
-                            <input type="text" class="form-control" id="jamkeluarinput"
-                                placeholder="Masukan Jam Keluar Pelajaran Anda">
-                        </div>
+                        <label class="form-label" for="ParkiranIDInput">Parkiran ID</label>
+                        <input type="text" class="form-control" id="ParkiranIDInput" name="ParkiranIDInput"
+                            placeholder="Masukan Parkiran ID (D3/D4/S1NPM)"><br>
 
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select id="Statusinput" name="newStatus" class="w-full mb-4 p-2 border text-black"
-                                required>
-                                <option value="active">Mahasiswa Aktif</option>
-                                <option value="inactive">Mahasiswa Tidak Aktif</option>
-                            </select>
-                        </div>
+                        <label class="form-label" for="NamaLengkapInput">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="NamaLengkapInput" name="NamaLengkapInput"
+                            placeholder="Masukan Nama Lengkap Anda"><br>
 
-                        <input type="submit" value="Submit" class="btn btn-primary"></input>
+                        <label class="form-label" for="NPMInput">NPM</label>
+                        <input type="number" class="form-control" id="NPMInput" name="NPMInput"
+                            placeholder="Masukan NPM Anda"><br>
+
+                        <label class="form-label" for="ProdiInput">Prodi</label>
+                        <input type="text" class="form-control" id="ProdiInput" name="ProdiInput"
+                            placeholder="Masukan Prodi Anda"><br>
+
+                        <label class="form-label" for="NamaKendaraanInput">Nama Kendaraan</label>
+                        <input type="text" class="form-control" id="NamaKendaraanInput" name="NamaKendaraanInput"
+                            placeholder="Masukan Nama Merk Kendaraan Anda"><br>
+
+                        <label class="form-label" for="NomorKendaraanInput">Nomor Kendaraan</label>
+                        <input type="text" class="form-control" id="NomorKendaraanInput" name="NomorKendaraanInput"
+                            placeholder="Masukan Nomor Polisi Kendaraan Anda"><br>
+
+                        <label class="form-label" for="JenisKendaraanInput">Jenis Kendaraan</label>
+                        <input type="text" class="form-control" id="JenisKendaraanInput" name="JenisKendaraanInput"
+                            placeholder="Masukan Jenis Kendaraan Anda"><br>
+
+                        <label class="form-label" for="StatusInput">Status</label>
+                        <select id="StatusInput" name="StatusInput" class="w-full mb-2 p-2 border text-black" required>
+                            <option value="active">Mahasiswa Aktif</option>
+                            <option value="inactive">Mahasiswa Tidak Aktif</option>
+                        </select><br><br>
+
+                        <label class="form-label" for="JamMasukInput">Jam Masuk Pelajaran</label>
+                        <input type="text" class="form-control" id="JamMasukInput" name="JamMasukInput"
+                            placeholder="Masukan Jam Masuk Pelajaran Anda"><br>
+
+                        <label class="form-label" for="JamKeluarInput">Jam Keluar Pelajaran</label>
+                        <input type="text" class="form-control" id="JamKeluarInput" name="JamKeluarInput"
+                            placeholder="Masukan Jam Keluar Pelajaran Anda"><br>
+
+
+                        <button type="submit" id="submit" class="btn btn-primary">
+                            Ubah Data
+                        </button>
 
                     </form>
                 </div>
@@ -245,11 +237,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.0.1/main.js"></script>
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.1/js/user/controller/controllerLogout.js">
+        src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.1.0/js/controller/controllerLogout.js">
     </script>
     <script type="module"
-        src="https://cdn.jsdelivr.net/gh/pakarbi/js-pakarbi@0.9.3/js/user/controller/controllerUpdateDataParkiran.js">
-    </script>
+        src="https://cdn.jsdelivr.net/gh/pakarbi/jspakarbi@0.1.0/js/controller/controllerUpdateParkiran.js"></script>
 </body>
 
 </html>
